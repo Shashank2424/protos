@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(images/ferrari.jpeg);
+            background-size: cover;
+            background-position: center; 
+        }
+        header {
+            color: #0a0a0a;
+            padding: 10px 10px;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute; 
+            top: 0px;
+            left: 0px;
+            height: 100px;
+            width: auto;
+        }
+        nav {
+            padding: 10px 0;
+            text-align: right;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0c0c0c;
+        }
+        nav a:hover {
+            color: #f8f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        form {
+            background-color: #db4b4b;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+        function submitform(){
+            document.forms[0].action="reg2.html";
+            document.forms[0].submit();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>FERRARI</h1>
+        <img src="images/Ferrari-Symbol.png">
+    </header>
+    <nav>
+        <a href="https://www.ferrari.com/en-IN">HOME</a>
+        <a href="https://www.ferrari.com/en-EN/formula1/sf-24">RACING</a>
+        <a href="https://www.ferrari.com/en-EN/magazine/news">ABOUT US</a>
+    </nav>
+    <div class="container">
+        <form action="reg2.html" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
